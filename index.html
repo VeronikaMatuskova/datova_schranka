@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="cs" class="js-no">
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="content-language" content="cs"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#2362a2">
+<meta name="apple-mobile-web-app-title" content="Datov&eacute; schr&aacute;nky">
+<meta name="application-name" content="Datov&eacute; schr&aacute;nky">
+<meta name="msapplication-TileColor" content="#2362a2">
+<meta name="theme-color" content="#2362a2">
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<meta name="author" content=""/>
+<meta name="author" content=""/>
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,user-scalable=yes"/>
+<meta name="format-detection" content="telephone=no"/>
+<link rel="stylesheet" href="/as4/static/font-awesome-6/css/all.min.css" type="text/css"/>
+<link rel="stylesheet" media="screen" href="/as4/static/gov-design-system/build/ds-styles.min.css" type="text/css">
+<link rel="stylesheet" media="print" href="/as4/static/gov-design-system/build/print.min.css" type="text/css">
+<link rel="stylesheet" href="/as4/static/styles/ds-overrides.css?ver=10" type="text/css">
+<link rel="stylesheet" href="/as4/static/keys/isds_keys_ts953.css" type="text/css"/>
+<script src="/as4/static/js/jquery-3.7.1.min.js" type="text/javascript"></script>
+<script src="/as4/static/js/utilitiesEx.js?ver=2" type="text/javascript"></script>
+<script defer src="/as4/static/gov-design-system/build/ds-scripts.js" type="text/javascript"></script>
+<script defer src="/as4/static/styles/safari-focus-polyfill.js" type="text/javascript"></script>
+<script defer src="/as4/static/js/isdsValidateLoginEx.js?ver=15" type="text/javascript"></script>
+<script defer src="/as4/static/js/languageSwitchHandler.js" type="text/javascript"></script>
+<script defer src="/as4/static/keys/keyboardEx.js?ver=5" type="text/javascript"></script>
+<script defer src="/as4/static/js/capsLockDetectHandler.js?ver=2" type="text/javascript"></script>
+<script defer src="/as4/static/js/sendSmsEx.js?ver=7" type="text/javascript"></script>
+<script defer src="/as4/static/js/loginCert.js" type="text/javascript"></script>
+<title>Datové schránky</title>
+</head>
+<body id="login-redesign">
+<!-- HLAS: -->
+<h1 class="aural">Datové schránky - Přihlášení</h1>
+<h2 class="aural"><a name="local-aural">Hlasová navigace a klávesové zkratky</a></h2>
+<p class="aural robots-nocontent" id="aural-nav">
+<a href="#local-content" rel="nofollow" accesskey="0" tabindex="-1">Jít na obsah (0)</a>
+<a href="#local-nav" rel="nofollow" accesskey="5" tabindex="-1">Jít na hlavní menu (5)</a>.
+<a href="#local-aural" rel="nofollow" accesskey="1" tabindex="-1">Nápověda ke klávesovým zkratkám (1)</a>.
+</p>
+<div class="gov-page login-page">
+<div class="ds-header-container">
+<header class="gov-container gov-container--no-y-offset gov-portal-header">
+<div class="gov-container__content ds-header">
+<!-- region Logo (desktop) -->
+<div class="ds-logo">
+<a class="gov-logo gov-logo--inversed ds-mobile-not" href="https://www.mojedatovaschranka.cz/" >
+<div class="gov-pictogram gov-pictogram--inversed">
+<img class="svg-img" src="../as4/static/images/ds_logotyp_rgb.svg" alt="isds logo"/>
+</div>
+<span class="gov-logo__sitename u-sr-only">
+datové schránky </span>
+</a>
+</div>
+<!-- endregion -->
+<div class="gov-portal-header__upper top-btn-container">
+<!-- region Logo (mobile) -->
+<div class="gov-portal-header__column ds-mobile-only">
+<a class="gov-logo gov-logo--inversed " href="https://www.mojedatovaschranka.cz/" >
+<div class="gov-pictogram gov-pictogram--inversed">
+<img class="svg-img" src="../as4/static/images/ds_logotyp_rgb.svg" alt="isds logo"/>
+</div>
+<span class="gov-logo__sitename u-sr-only">
+datové schránky </span>
+</a>
+<button id="mobile-menu-btn" class="gov-hamburger">
+MENU </button>
+</div>
+<!-- endregion -->
+<!-- region Menu (desktop) -->
+<button class="gov-button gov-button--inversed ds-hide-on-mobile js-button-link" data-link-ref="https://info.mojedatovaschranka.cz/info/cs/help/1.5.text.html" data-link-new-window="true">
+Nápověda </button>
+<!---->
+<div class="infolinka ds-hide-on-mobile">
+<span>Infolinka&nbsp;</span><a class="infoline_link auto-blur" href="tel:954 200 200">954 200 200</a>
+</div>
+<div class="gov-portal-header__column ds-header-search ds-hide-on-mobile">
+<div class="gov-search">
+<div class="gov-search__inner">
+<form method="get" action="https://info.mojedatovaschranka.cz/info/cs/search.html" target="_blank">
+<div class="gov-form-control gov-form-control--inversed unset-minwidth">
+<input name="q" id="header-search-q" class="gov-form-control__input gov-form-control__input--standalone" type="text" required="required" aria-required="true" aria-disabled="false" maxlength="255" placeholder="Hledat" />
+<label class="gov-form-control__label u-sr-only" for="header-search-q">Hledat</label>
+</div>
+<button type="submit" class="gov-button gov-button--primary gov-button--icon-only gov-search__submit" aria-labelledby="header-search-submit">
+<span id="header-search-submit" class="u-sr-only gov-button__label">Hledat</span>
+</button>
+</form>
+</div>
+</div>
+</div>
+<div class="d-block mb-1">
+</div>
+<!-- endregion -->
+</div>
+<!-- region Menu (mobile) -->
+<nav class="gov-portal-nav ds-portal-nav ds-mobile-only">
+<ul class="gov-portal-nav__menu">
+<li class="gov-portal-nav__item">
+<a class="gov-link gov-link--standalone gov-link--large gov-link--has-arrow gov-link--no-underline gov-link--inversed" href="/">Úvodní stránka</a>
+</li>
+<li class="gov-portal-nav__item">
+<a class="gov-link gov-link--standalone gov-link--large gov-link--has-arrow gov-link--no-underline gov-link--inversed js-a-new-window" href="https://info.mojedatovaschranka.cz/info/cs/help/1.5.text.html">Nápověda</a>
+</li>
+</ul>
+</nav>
+<!-- endregion -->
+</div>
+</header>
+</div>
+<div class="ds-top">
+<div class="ds-middle">
+<!-- min-height: 48em so that the login method accordion can be expanded fully -->
+<div class="gov-container gov-container--no-y-offset main-body " style="min-height: 48em">
+<div class="gov-container__content ds-desktop-search ds-show-on-mobile">
+<div class="gov-portal-header__column ds-header-search ">
+<div class="gov-search">
+<div class="gov-search__inner">
+<form method="get" action="https://info.mojedatovaschranka.cz/info/cs/search.html" target="_blank">
+<div class="gov-form-control gov-form-control--inversed ">
+<input name="q" id="search-mob-q" class="gov-form-control__input gov-form-control__input--standalone" type="text" required="required" aria-required="true" aria-disabled="false" maxlength="255" placeholder="Hledat" />
+<label class="gov-form-control__label u-sr-only" for="search-mob-q">Hledat</label>
+</div>
+<button type="submit" class="gov-button gov-button--primary gov-button--icon-only gov-search__submit" aria-labelledby="search-mob-submit">
+<span id="search-mob-submit" class="u-sr-only gov-button__label">Hledat</span>
+</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="gov-container__content login-page-content">
+<div class="gov-layout gov-layout--ratio-1-2 ">
+<!-- Prava sekce stranky -->
+<section class="gov-layout__col gov-layout__col--spread-3 ds-pt-desktop--20 gov-layout__col--pos-right">
+<div class="gov-content-block">
+<div class="gov-layout gov-layout--ratio-3-1">
+<div class="gov-layout__col gov-layout__col--spread-3 u-pb--40 gov-layout__col--pos-left">
+<!-- region Drobečková navigace -->
+<div class="gov-breadcrumbs">
+<span class="gov-breadcrumbs__item">
+<a class="gov-link gov-link--standalone" href="https://www.mojedatovaschranka.cz">Úvodní stránka</a>
+</span>
+<span class="gov-breadcrumbs__item">
+<strong class="gov-title gov-title--delta">Přihlášení jménem a heslem</strong>
+</span>
+</div>
+<!-- endregion -->
+<!-- region Obsah -->
+<section class="content login-pwd">
+<div class="main-form">
+<!-- region Informační text MV -->
+<!-- endregion -->
+<h2>Přihlašujete se <strong>jménem a heslem</strong></h2>
+<a name="local-nav"></a>
+<div class="gov-accordion gov-js-accordion gov-accordion--small" role="list">
+<button
+id="gov-accordion-methods-header"
+class="gov-accordion__header gov-accordion__header--noborder js-click-on-esc-if-class"
+role="listitem"
+aria-expanded="true"
+aria-controls="gov-accordion-methods-content"
+data-click-on-esc-if-class="is-expanded">
+<span class="txt">Zvolit jiný způsob přihlášení</span>
+</button>
+<div class="gov-accordion__content" id="gov-accordion-methods-content" aria-hidden="false" aria-labelledby="gov-accordion-methods-header" role="tabpanel">
+<div class="gov-accordion__content-inner">
+<ul class="gov-list--plain login-methods">
+<li>
+<span aria-hidden="true" class="gov-icon-svg-25">
+<img class="svg-img" src="../as4/static/images/mep_lev.svg" alt="ikona"/>
+</span>
+<a class="gov-link gov-link--standalone gov-link--large gov-link gov-link--has-arrow gov-link--no-underline" href="https://www.mojedatovaschranka.cz/as/login?type=mep&uri=https%3A%2F%2Fwww.mojedatovaschranka.cz%2Fportal%2FISDS%2F">MOBILNÍM KLÍČEM</a>
+</li>
+<li>
+<span aria-hidden="true" class="gov-icon-svg-25">
+<img class="svg-img" src="../as4/static/images/nia_lev.svg" alt="ikona"/>
+</span>
+<a class="gov-link gov-link--standalone gov-link--large gov-link gov-link--has-arrow gov-link--no-underline" href="https://www.mojedatovaschranka.cz/as/login?type=saml&uri=https%3A%2F%2Fwww.mojedatovaschranka.cz%2Fportal%2FISDS%2F">IDENTITOU OBČANA<br><span class="note">(BANKOVNÍ IDENTITA, NIA ID...)</span></a>
+</li>
+<li>
+<span aria-hidden="true" class="gov-icon-svg-25">
+<img class="svg-img" src="../as4/static/images/sms.svg" alt="ikona"/>
+</span>
+<a class="gov-link gov-link--standalone gov-link--large gov-link gov-link--has-arrow gov-link--no-underline" href="https://www.mojedatovaschranka.cz/as/login?type=sms&uri=https%3A%2F%2Fwww.mojedatovaschranka.cz%2Fportal%2FISDS%2F">POMOCÍ SMS</a>
+</li>
+<li>
+<span aria-hidden="true" class="gov-icon-svg-25">
+<img class="svg-img" src="../as4/static/images/cert.svg" alt="ikona"/>
+</span>
+<a class="gov-link gov-link--standalone gov-link--large gov-link gov-link--has-arrow gov-link--no-underline" href="login?type=cert&uri=https%3A%2F%2Fwww.mojedatovaschranka.cz%2Fportal%2FISDS%2F">CERTIFIKÁTEM</a>
+</li>
+<li>
+<span aria-hidden="true" class="gov-icon-svg-25">
+<img class="svg-img" src="../as4/static/images/hwtoken.svg" alt="ikona"/>
+</span>
+<a class="gov-link gov-link--standalone gov-link--large gov-link gov-link--has-arrow gov-link--no-underline" href="https://www.mojedatovaschranka.cz/as/login?type=calc&uri=https%3A%2F%2Fwww.mojedatovaschranka.cz%2Fportal%2FISDS%2F">BEZPEČNOSTNÍM KÓDEM</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a name="local-content"></a>
+<!-- region Jméno a heslo -->
+<form method="post" action="processLogin" enctype="application/x-www-form-urlencoded" id="IDPLogin">
+<input type="hidden" name="type" value="captcha"/>
+<input type="hidden" name="uri" value="https://www.mojedatovaschranka.cz/portal/ISDS/"/>
+<input type="hidden" name="ats" value="false"/>
+<input type="hidden" name="isUriCert" value="false"/>
+<input type="hidden" name="Ecom_Captcha" id="Ecom_Captcha" value="50505"/>
+<div class="error">
+</div>
+<div class="gov-form-control">
+<input id="Ecom_User_ID"
+name="Ecom_User_ID"
+class="gov-form-control__input gov-js-input js-pattern-mismatch-error-from-title"
+type="text"
+required="required"
+aria-required="true"
+aria-disabled="false"
+placeholder=""
+maxlength="6"
+autofocus
+pattern="[a-z0-9]{6}" title="Šestiznakové přihlašovací jméno, jen malá písmena a číslice"
+autocomplete="username"
+>
+<label class="gov-form-control__label required-input" for="Ecom_User_ID">
+Uživatelské jméno </label>
+</div>
+<div class="gov-form-control__message">
+<span id="warn-capslock-psw-change0" class="d-none " style="color: red;">
+Pozor, máte zapnutý caps lock! </span>
+</div>
+<div class="gov-form-control last-form-item">
+<input name="Ecom_Password"
+id="Ecom_Password"
+class="gov-form-control__input gov-js-input"
+type="password"
+required="required"
+aria-required="true"
+aria-disabled="false"
+placeholder=""
+autocomplete="current-password"
+style="padding-right: 50px"
+data-capslock-hide-on-blur="false"
+>
+<label class="gov-form-control__label required-input" for="Ecom_Password">
+Heslo
+</label>
+<button id="togglePassword" class="gov-button gov-button--icon-only gov-pwd__show" type="button">
+<img class="svg-img" src="../as4/static/images/eye.svg" alt="ikona - zobraz heslo"/>
+</button>
+<button class="gov-button gov-button--icon-only gov-pwd__grafkey ds-hide-on-mobile" id="keyboard1" type="button" tabindex="-1">
+<i class="fa-regular fa-keyboard graf-keyb-btn" title="Otevřít grafickou klávesnici"></i>
+</button>
+</div>
+<div style="text-align: center;">
+<button class="gov-button gov-button--primary" type="submit" >
+Přihlásit se </button>
+</div>
+</form>
+<p class="gov-note with-line">
+Pokud jste se ještě nikdy nepřihlašovali do své datové schránky, použijte přihlašovací údaje, které Vám byly vygenerovány systémem a doručeny v obálce se žlutým pruhem nebo prostřednictvím aktivačního portálu. </p>
+<!-- display: inline-block in order to avoid wrapping the target="_blank" icon in Firefox -->
+<p class="mb-0"><a href="https://info.mojedatovaschranka.cz/info/cs/help/11.0.text.html#11_0" target="_blank" style="display:inline-block;">Zapomenuté heslo</a></p>
+<!-- endregion -->
+</div>
+<!-- region Zjednodušte si přihlašování -->
+<div class="hint-section">
+<h2>Zjednodušte si přihlašování</h2>
+<p class="gov-note">
+Pomocí aplikace <strong>Mobilní klíč eGovernmentu</strong> se budete moci přihlásit jednoduše a rychle pouhým naskenováním QR kódu. Stáhněte si ji a případně si <a href="https://info.mojedatovaschranka.cz/info/cs/1007.html" target="_blank">přečtěte návod</a>. </p>
+<div class="download-mep">
+<div>
+<a class="gov-link gov-link--external-unset ds-img-link" href="https://play.google.com/store/apps/details?id=cz.mojedatovaschranka.mobilniklic&amp;hl=cs" target="_blank"><img alt="aplikace Mobilní klíč v Google Play" src="../as4/static/images/google-play-badge.png"> </a>
+</div>
+<div>
+<a class="gov-link gov-link--external-unset ds-img-link" href="https://apps.apple.com/cz/app/mobiln%C3%AD-kl%C3%AD%C4%8D-isds/id1466762017" target="_blank"><img alt="aplikace Mobilní klíč v App Store" src="../as4/static/images/app_store-icon-black.svg"> </a>
+</div>
+</div>
+</div>
+<!-- endregion -->
+</section>
+<!-- endregion -->
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div> <!-- ds-middle -->
+</div> <!-- ds-top -->
+<footer class="gov-container u-bg-color--grey-dark gov-footer">
+<div class="gov-container__content">
+<section class="gov-footer__upper u-screen--only">
+<div class="gov-footer__col">
+<h3 class="gov-footer__headline">
+Informace </h3>
+<ul class="gov-list--plain">
+<li>
+<a href="https://info.mojedatovaschranka.cz/info/cs/help/13.0.text.html#13_0" class="gov-link gov-link--standalone gov-link--inversed" target="_blank" rel="noopener noreferrer">
+Prohlášení o přístupnosti </a>
+</li>
+<li>
+<a href="https://info.mojedatovaschranka.cz/info/cs/help/14.0.text.html#14_0" class="gov-link gov-link--standalone gov-link--inversed" target="_blank" rel="noopener noreferrer">
+Informace o zpracování osobních údajů </a>
+</li>
+</ul>
+</div>
+<div class="gov-footer__col">
+<h3 class="gov-footer__headline">
+Kontakty </h3>
+<ul class="gov-list--plain">
+<li>
+<a href="tel:954 200 200" class="gov-link gov-link--standalone gov-link--inversed ds-no-text-decoration ds-center-items" target="_blank" rel="noopener noreferrer">
+<span class="gov-icon gov-icon--phone"></span><span>954 200 200</span>
+</a>
+</li>
+<li>
+<a href="https://info.mojedatovaschranka.cz/info/cs/eporadna.html" class="gov-link gov-link--standalone gov-link--inversed" target="_blank" rel="noopener noreferrer">
+<span class="ds-lowercase">e</span>Poradna
+</a>
+</li>
+</ul>
+</div>
+<div class="gov-footer__col">
+<h3 class="gov-footer__headline">
+Užitečné odkazy </h3>
+<ul class="gov-list--plain">
+<li>
+<a href="https://www.mojedatovaschranka.cz/sds/" class="gov-link gov-link--standalone gov-link--inversed" target="_blank" rel="noopener noreferrer">
+Seznam datových schránek </a>
+</li>
+<li>
+<a href="https://info.mojedatovaschranka.cz/info/cs/stats.html" class="gov-link gov-link--standalone gov-link--inversed" target="_blank" rel="noopener noreferrer">
+Statistiky </a>
+</li>
+<li>
+<a href="https://www.datovy-trezor.cz/" class="gov-link gov-link--standalone gov-link--inversed" target="_blank" rel="noopener noreferrer">
+Datový trezor </a>
+</li>
+<li>
+<a href="https://info.mojedatovaschranka.cz/info/cs/82.html" class="gov-link gov-link--standalone gov-link--inversed" target="_blank" rel="noopener noreferrer">
+Poštovní datová zpráva </a>
+</li>
+<li>
+<a href="https://www.kredit-ds.cz/" class="gov-link gov-link--standalone gov-link--inversed" target="_blank" rel="noopener noreferrer">
+Kreditní systém </a>
+</li>
+</ul>
+</div>
+<div class="gov-footer__col">
+<h3 class="gov-footer__headline">
+<!-- bez nadpisu -->
+</h3>
+<ul class="gov-list--plain">
+<!-- gov-list--inline - do jedne radky -->
+<li>
+<a href="https://www.czechpoint.cz/public/" class="gov-link gov-link--standalone gov-link--inversed" target="_blank" rel="noopener noreferrer">
+Czech POINT
+</a>
+</li>
+<li>
+<div class="ds-link-header">Aplikace Mobilní klíč</div>
+<div class="ds-mt-0">
+<a class="gov-link gov-link--external-unset ds-img-link" href="https://play.google.com/store/apps/details?id=cz.mojedatovaschranka.mobilniklic&hl=cs" target="_blank"><img alt="aplikace Mobilní klíč v Google Play" src="../as4/static/images/google-play-badge.png"> </a>
+</div>
+<div class="ds-mt-0">
+<a class="gov-link gov-link--external-unset ds-img-link" href="https://apps.apple.com/cz/app/mobiln%C3%AD-kl%C3%AD%C4%8D-isds/id1466762017" target="_blank"><img alt="aplikace Mobilní klíč v App Store" src="../as4/static/images/app_store-icon.png"> </a>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<hr>
+<section class="gov-footer__lower">
+<p class="gov-footnote">
+&copy; 2025 Digitální a informační agentura, všechna práva vyhrazena • Provoz datových schránek i webové prezentace zajišťuje Česká pošta, s.p.
+</p>
+<!--
+<p class="gov-footnote">
+Verze 1.0.0
+</p>
+-->
+</section>
+<button class="gov-button gov-button--primary-outlined gov-button--inversed gov-footer__scroll-up gov-js--scroll-up" aria-labelledby="fo-scrollBtn">
+<span id="fo-scrollBtn" class="u-sr-only gov-button__label">
+Zpět nahoru </span>
+</button>
+</div>
+</footer>
+</div> <!--gov-page login-page-->
+<!-- region Grafická klávesnice -->
+<div class="row no-gutters ds-hide-on-mobile">
+<div style="position: relative">
+<div id="keyboardMain" class="keyboardInvisible" style="z-index: 300">
+<span id="keyboardClose">Zavřít okno s klávesnicí</span>
+<span>
+<a href="https://info.mojedatovaschranka.cz/info/cs/help/1.5.text.html#1_5_2_1"
+title="Nápověda"
+id="keyboardHelp"
+target="_blank"
+tabindex="-1">Nápověda</a>
+</span>
+<div id="keyboard">
+<div id="keyb_row1">
+<span class="square button key disabled" id="keyN0"></span>
+<span class="square button key" id="keyN1">1</span>
+<span class="square button key" id="keyN2">2</span>
+<span class="square button key" id="keyN3">3</span>
+<span class="square button key" id="keyN4">4</span>
+<span class="square button key" id="keyN5">5</span>
+<span class="square button key" id="keyN6">6</span>
+<span class="square button key" id="keyN7">7</span>
+<span class="square button key" id="keyN8">8</span>
+<span class="square button key" id="keyN9">9</span>
+<span class="square button key" id="keyN10">0</span>
+<span class="square button key" id="keyN11">-</span>
+<span class="square button key" id="keyN12">=</span>
+<span id="row1Backspace" class="button grey small special">Back</span>
+</div>
+<div id="keyb_row2">
+<span id="row2Left" class="inactive"></span>
+<span class="square button key" id="keyN13">q</span>
+<span class="square button key" id="keyN14">w</span>
+<span class="square button key" id="keyN15">e</span>
+<span class="square button key" id="keyN16">r</span>
+<span class="square button key" id="keyN17">t</span>
+<span class="square button key" id="keyN18">y</span>
+<span class="square button key" id="keyN19">u</span>
+<span class="square button key" id="keyN20">i</span>
+<span class="square button key" id="keyN21">o</span>
+<span class="square button key" id="keyN22">p</span>
+<span class="square button key" id="keyN23">[</span>
+<span class="square button key" id="keyN24">]</span>
+<span class="square button key disabled" id="keyN25"></span>
+<span class="inactive"></span>
+</div>
+<div id="keyb_row3">
+<span id="row3CapsLock" class="button grey small special">Lock</span>
+<span class="square button key" id="keyN26">a</span>
+<span class="square button key" id="keyN27">s</span>
+<span class="square button key" id="keyN28">d</span>
+<span class="square button key" id="keyN29">f</span>
+<span class="square button key" id="keyN30">g</span>
+<span class="square button key" id="keyN31">h</span>
+<span class="square button key" id="keyN32">j</span>
+<span class="square button key" id="keyN33">k</span>
+<span class="square button key" id="keyN34">l</span>
+<span class="square button key disabled" id="keyN35"></span>
+<span class="square button key disabled" id="keyN36"></span>
+<span id="row3Right" class="inactive"></span>
+</div>
+<div id="keyb_row4">
+<span id="row4ShiftLeft" class="button grey small special">Shift</span>
+<span class="square button key" id="keyN37">z</span>
+<span class="square button key" id="keyN38">x</span>
+<span class="square button key" id="keyN39">c</span>
+<span class="square button key" id="keyN40">v</span>
+<span class="square button key" id="keyN41">b</span>
+<span class="square button key" id="keyN42">n</span>
+<span class="square button key" id="keyN43">m</span>
+<span class="square button key" id="keyN44">,</span>
+<span class="square button key" id="keyN45">.</span>
+<span class="square button key disabled" id="keyN46"></span>
+<span id="row4ShiftRight" class="button grey small special">Shift</span>
+</div>
+<div id="keyb_row5">
+<span id="row5Left" class="inactive" style="width: 110px"></span>
+<span class="button light small special" id="keyN47">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- endregion -->
+</body>
+</html>
